@@ -1,14 +1,15 @@
-(async function () {
 
+(async function () {
+    require('dotenv').config()
     const fs = require('fs')
     const { parse } = require('node-html-parser')
-    const path = './records/2024-11-09.html'
+    const path = process.env.RECORDS_FILE_PATH
     const file = fs.readFileSync(path, 'utf8')
     const postGameTripsFilePath = './post-game-trips.json'
     const {
         isPickupCloseToVenue
     } = require('./helpers')
-    require('dotenv').config()
+
     try {
         fs.readFileSync(postGameTripsFilePath, 'utf8')
     }

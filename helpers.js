@@ -1,9 +1,10 @@
+require('dotenv').config()
 /**
  * If a next trip after a hockey game is from a venue to home
  * and that pickup location is within this radius, then it's assumed
  * to be a post game trip from a bar
  */
-const barRadiusMetres = 950
+const barRadiusMetres = process.env.BAR_RADIUS
 
 function findPostGameTrip(from, to, postGameTrips) {
     return postGameTrips.find(trip => trip.from === from && trip.to === to)
