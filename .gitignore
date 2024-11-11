@@ -1,0 +1,6 @@
+/node_modules
+/records
+.ENV
+/post-game-trips.json
+/home.json
+/venues.json
