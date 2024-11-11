@@ -25,6 +25,10 @@ BAR_RADIUS
 
 # path to the trips records html file copied from uber
 RECORDS_FILE_PATH
+
+# filter rides after a certain date. Uber's records go back 2 years, set it accordingly if you want everything
+# format is a full datetime string with timezone eg 2022-10-01T00:00:00.000Z
+START_DATE
 ```
 
 ## JSON Files
