@@ -28,7 +28,7 @@
 
     const home = require('./home.json')
 
-    const startDate = new Date('2024-01-01T00:00:00.000Z')
+    const startDate = new Date(process.env.START_DATE)
 
     const hockeyVenues = require('./venues.json')
 
@@ -56,9 +56,9 @@
 
     const allTrips = allTripsRaw
         .filter(trip => trip.from !== '')
-        // .filter((trip, index, arr) => arr.findIndex(t => t.date.getTime() === trip.date.getTime()) === index) // remove duplicates
+        .filter((trip, index, arr) => arr.findIndex(t => t.date.getTime() === trip.date.getTime()) === index) // remove duplicates
         .sort((a, b) => a.date.getTime() < b.date.getTime() ? -1 : 1) // sort by date
-    // .filter(trip => trip.date.getTime() >= startDate.getTime()) // filter by start date
+        .filter(trip => trip.date.getTime() >= startDate.getTime()) // filter by start date
 
     /**
      * trips in here are the next trip after a hockey game
