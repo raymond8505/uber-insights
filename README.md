@@ -1,6 +1,6 @@
 ## What
 
-Parses my Uber ride history to find useful budgeting info about my trips to and from hockey
+Parses my Uber ride history to find useful budgeting info about my trips to and from hockey. But you can use it in general to gain insights on any Uber trips you take regularly.
 
 ## How
 
